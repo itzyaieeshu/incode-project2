@@ -373,6 +373,12 @@ h3 {
     background-color: #6A7B8C;
     border-radius: 5px;
     border: 1px #6A7B8C;
+    cursor: pointer;
+}
+.submit-button:disabled {
+    color: #FFFFFF;
+    background-color: #cccccc;
+    cursor: no-drop;
 }
 .form-control {
     width: 100%;
