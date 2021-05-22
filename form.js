@@ -15,7 +15,9 @@ document.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
     const firstName = document.getElementById("firstname")
     const lastName = document.getElementById("lastname")
+    const telephone = document.getElementById("telephone")
     let nameValid = /^[A-Za-zÀ-ÖØ-öø-ÿ \-']+$/i
+    let telephoneValid = /^[0-9 \+']+$/i
     let firstNameValidation = () => {
         const firstNameMessage = document.getElementById("firstNameMessage")
         if (nameValid.test(firstName.value) === false) {
@@ -44,10 +46,27 @@ document.addEventListener("DOMContentLoaded", () => {
             return false
         }
     }
+    let telephoneValidation = () => {
+        const telephoneMessage = document.getElementById("telephoneMessage")
+        if (telephoneValid.test(telephone.value) === false) {
+            telephoneMessage.innerHTML = "Enter the valid Prénom";
+            telephone.classList.remove("valid-box")
+            telephone.classList.add("error-box")
+            return true
+        } else if (telephoneValid.test(telephone.value) === true) {
+            telephoneMessage.innerHTML = "";
+            telephone.classList.remove("error-box")
+            telephone.classList.add("valid-box")
+            return false
+        }
+    }
     firstName.oninput = () => {
         firstNameValidation()
     }
     lastName.oninput = () => {
         lastNameValidation()
+    }
+    telephone.oninput = () => {
+        telephoneValidation()
     }
 })
