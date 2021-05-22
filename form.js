@@ -12,3 +12,20 @@ document.addEventListener("click", (event) => {
         modal.style.display = "none";
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const firstName = document.getElementById("firstname")
+    let nameValidation = () => {
+        const firstNameMessage = document.getElementById("firstNameMessage")
+        let nameValid = /^[A-Za-zÀ-ÖØ-öø-ÿ \-']+$/i
+        if (nameValid.test(firstName.value) === false) {
+            firstNameMessage.innerHTML = "Enter the valid name";
+            return true
+        } else if (nameValid.test(firstName.value) === true) {
+            firstNameMessage.innerHTML = "";
+            return false
+        }
+    }
+    firstName.oninput = () => {
+        nameValidation()
+    }
+})

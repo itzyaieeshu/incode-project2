@@ -55,15 +55,17 @@
                 <div class="contact-form">
                     <h2 class="content-center">Dites nous tout !</h2>
                     <form novalidation>
-                        <label for="fname">Nom:*</label>
-                        <input class="form-control" type="text" id="name" name="name" value="">
-                        <label for="lastname">Prénom:*</label>
+                        <label for="firstname">Nom *</label>
+                        <input class="form-control" type="text" id="firstname" name="firstname" value="">
+                        <p id="firstNameMessage"></p>
+                        <label for="lastname">Prénom *</label>
                         <input class="form-control" type="text" id="lastname" name="lastname" value="">
-                        <label for="telephone">Téléphone:</label>
+                        <p id="lastNameValidation"></p>
+                        <label for="telephone">Téléphone </label>
                         <input class="form-control" type="phone" id="telephone" name="telephone" value="">
-                        <label for="address">Adresse mail:*</label>
-                        <input class="form-control" type="text" id="address" name="address" value="">
-                        <label for="message">Message:*</label>
+                        <label for="email">Adresse mail *</label>
+                        <input class="form-control" type="text" id="email" name="email" value="">
+                        <label for="message">Message </label>
                         <textarea class="form-control" type="description" id="message" name="message" value="" rows="6"
                             colomns="100%"></textarea>
                     </form>
