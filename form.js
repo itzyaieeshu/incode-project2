@@ -67,6 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
         lastNameValidation()
     }
     telephone.oninput = () => {
-        telephoneValidation()
+        if (telephone.value != "") {
+            telephoneValidation()
+        } else {
+            telephone.classList.remove("error-box")
+            telephone.classList.remove("valid-box")
+        }
     }
 })
