@@ -14,8 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const firstName = document.getElementById("firstname")
     const lastName = document.getElementById("lastname")
     const telephone = document.getElementById("telephone")
+    const email = document.getElementById("email")
     let nameValid = /^[A-Za-zÀ-ÖØ-öø-ÿ \-']+$/i
     let telephoneValid = /^[0-9 \+']+$/i
+    let emailValid = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/
     var firstNameValidation = () => {
         let result = false
         const firstNameMessage = document.getElementById("firstNameMessage")
@@ -48,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return result
     }
-     telephoneValidation = () => {
+    var telephoneValidation = () => {
         const telephoneMessage = document.getElementById("telephoneMessage")
         if (telephoneValid.test(telephone.value) === false) {
-            telephoneMessage.innerHTML = "Enter the valid Prénom";
+            telephoneMessage.innerHTML = "Enter the valid Téléphone";
             telephone.classList.remove("valid-box")
             telephone.classList.add("error-box")
             return true
@@ -61,6 +63,22 @@ document.addEventListener("DOMContentLoaded", () => {
             telephone.classList.add("valid-box")
             return false
         }
+    }
+    var emailValidation = () => {
+        let result = false
+        const emailMessage = document.getElementById("emailMessage")
+        if (emailValid.test(email.value) === false) {
+            emailMessage.innerHTML = "Enter the valid Adresse mail"
+            email.classList.remove("valid-box")
+            email.classList.add("error-box")
+            result = true
+        } else if (emailValid.test(email.value) === true) {
+            emailMessage.innerHTML = "";
+            email.classList.remove("error-box")
+            email.classList.add("valid-box")
+            result = false
+        }
+        return result
     }
     firstName.oninput = () => {
         firstNameValidation()
@@ -75,6 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
             telephone.classList.remove("error-box")
             telephone.classList.remove("valid-box")
         }
+    }
+    email.oninput = () => {
+        emailValidation()
     }
     submitButton.onclick = () => {
         if (!firstNameValidation() && !lastNameValidation() ) {
