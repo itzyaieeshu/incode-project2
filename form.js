@@ -10,6 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let nameValid = /^[A-Za-zÀ-ÖØ-öø-ÿ \-']+$/i
     let telephoneValid = /^[0-9 \+']+$/i
     let emailValid = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/
+    var modal = document.getElementById("formSuccessMessage");
+    var modalClose = document.getElementById("modal-close");
+    var openModal = () => {
+        modal.style.display = "block";
+    }
+    modalClose.onclick = function() {
+        modal.style.display = "none";
+    }
     var firstNameValidation = () => {
         let result = false
         const firstNameMessage = document.getElementById("firstNameMessage")
@@ -96,13 +104,5 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             console.log("Enter valid inputs")
         }
-    }
-    var modal = document.getElementById("formSuccessMessage");
-    var span = document.getElementsByClassName("close")[0];
-    var openModal = () => {
-        modal.style.display = "block";
-    }
-    span.onclick = function() {
-        modal.style.display = "none";
     }
 })
