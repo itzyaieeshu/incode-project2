@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lastName = document.getElementById("lastname")
     const telephone = document.getElementById("telephone")
     const email = document.getElementById("email")
+    const message = document.getElementById("message")
     let nameValid = /^[A-Za-zÀ-ÖØ-öø-ÿ \-']+$/i
     let telephoneValid = /^[0-9 \+']+$/i
     let emailValid = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/
@@ -99,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     submitButton.onclick = () => {
         if (!firstNameValidation() && !lastNameValidation() && !emailValidation() ) {
-            console.log("Name" + firstName.value + " " + lastName.value + " " + email.value)
+            console.log("Name " + firstName.value + "\nLastName " + lastName.value  + "\nTelephone " + telephone.value + "\nEmail " + email.value + "\nMessage " + message.value )
             openModal()
         } else {
             console.log("Enter valid inputs")
