@@ -1,13 +1,5 @@
 document.addEventListener("click", (event) => {
-    var modal = document.getElementById("myModal");
-    var submitButton = document.getElementById("contact-submit");
-    var span = document.getElementsByClassName("close")[0];
-    // submitButton.onclick = () => {
-    //     modal.style.display = "block";
-    // }
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+    
 });
 document.addEventListener("DOMContentLoaded", () => {
     let submitButton = document.getElementById("contact-submit")
@@ -98,10 +90,19 @@ document.addEventListener("DOMContentLoaded", () => {
         emailValidation()
     }
     submitButton.onclick = () => {
-        if (!firstNameValidation() && !lastNameValidation() ) {
-            console.log("Name" + firstName.value + " " + lastName.value)
-        } else if (!firstNameValidation || !lastNameValidation ) {
-            document.getElementById("contact-submit").disabled = true;
+        if (!firstNameValidation() && !lastNameValidation() && !emailValidation() ) {
+            console.log("Name" + firstName.value + " " + lastName.value + " " + email.value)
+            openModal()
+        } else {
+            console.log("Enter valid inputs")
         }
+    }
+    var modal = document.getElementById("formSuccessMessage");
+    var span = document.getElementsByClassName("close")[0];
+    var openModal = () => {
+        modal.style.display = "block";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
     }
 })
