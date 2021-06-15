@@ -1,0 +1,37 @@
+{
+  "name": "mrcoffee",
+  "version": "1.0.0",
+  "description": "### Installation You can use any local server to run this program. However, I would recommend live-server to run this program If you don't have live-server installed already, try install using the below code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itzyaieeshu/incode-project2.git"
+  },
+  "author": "Mohamed Yaieeshu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itzyaieeshu/incode-project2/issues"
+  },
+  "homepage": "https://github.com/itzyaieeshu/incode-project2#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "css-loader": "^5.2.6",
+    "mini-css-extract-plugin": "^1.6.0",
+    "node-sass": "^6.0.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
