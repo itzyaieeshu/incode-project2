@@ -4,7 +4,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: {
-    home: ["./assets/js/app.js", "./assets/scss/_style.scss"],
+    home: ["./assets/js/app.js", "./assets/scss/style.scss"],
   },
   mode: "production",
   output: {
