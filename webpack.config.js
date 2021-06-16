@@ -1,6 +1,8 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+var glob = require("glob");
 
 module.exports = {
   entry: {
@@ -11,7 +13,16 @@ module.exports = {
     path: `${__dirname}/assets/dist`,
     filename: "js/bundle.js",
   },
-  plugins: [new MiniCssExtractPlugin({ filename: "css/style.css" })],
+  plugins: [
+    new MiniCssExtractPlugin({ filename: "css/style.css" }),
+	  new ImageminPlugin({
+		externalImages: {
+		  context: 'assets',
+		  sources: glob.sync('assets/img/**/*.{jpg,png}'),
+		  destination: 'assets/dist/',
+		}
+	  })
+  ],
   module: {
     rules: [
       {
