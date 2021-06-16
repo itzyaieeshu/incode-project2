@@ -1,0 +1,56 @@
+/* About Page */
+.about-section {
+	padding: 60px 60px;
+}
+.about-flex {
+	padding: 20px 20px;
+	display: flex;
+	align-items: center;
+}
+.about-flex-box {
+	padding: 10px 30px 10px 30px;
+	height: auto;
+}
+.about-img {
+	width: 100%;
+	height: auto;
+}
+.big-flex {
+	width: 55%;
+}
+.small-flex {
+	width: 45%;
+}
+.about-text {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #5C5B5B;
+	font-size: 20px;
+	font-weight: 400;
+}
+@media screen and (max-width: 1025px) {
+	.about-text {
+		font-size: 16px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+}
+@media screen and (max-width: 769px) {
+	.about-flex {
+		display: block;
+		padding: 20px 0px;
+	}
+	.big-flex {
+		width: 100%;
+	}
+	.small-flex {
+		width: 100%;
+	}
+	.about-flex-box {
+		padding: 10px 10px 10px 10px;
+	}
+	.about-section {
+		padding: 30px 0px;
+	}
+}

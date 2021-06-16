@@ -1,0 +1,57 @@
+/* flex section */
+.flex-header {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.flex-heading {
+	color: #5C5B5B;
+}
+.flex {
+	display: flex;
+	width: 100%;
+}
+.flex-box {
+	padding: 10px 10px 10px 10px;
+	width: 33.33%;
+	height: auto;
+}
+.card {
+	padding: 20px 30px 20px 30px;
+	width: 100%;
+	height: auto;
+	background-color: #BAC2C8;
+	min-height: 360px;
+}
+.card-icon {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 40%;
+	height: auto;
+}
+.card-heading {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFFFFF;
+}
+.card-text {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 500;
+}
+.find-out-button {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+@media screen and (max-width: 960px) {
+	.flex {
+		display: block;
+		width: 100%;
+	}
+	.flex-box {
+		padding: 10px 10px 10px 10px;
+		width: 100%;
+		height: auto;
+	}
+}
